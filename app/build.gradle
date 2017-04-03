@@ -71,9 +71,9 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile(group: 'com.shareplaylearn', name: 'user-item-manager', version: '1.7-SNAPSHOT')
-    compile(group: 'com.shareplaylearn', name: 'TokenValidator', version: '1.4-SNAPSHOT')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.shareplaylearn:user-item-manager:1.7-SNAPSHOT'
+    compile 'com.shareplaylearn:TokenValidator:1.4-SNAPSHOT'
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })

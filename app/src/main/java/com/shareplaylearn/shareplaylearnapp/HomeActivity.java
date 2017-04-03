@@ -23,7 +23,11 @@ public class HomeActivity extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        TokenValidator tokenValidator;
+
+        TokenValidator tokenValidator = new TokenValidator(
+                "https://www.shareplaylearn.com/auth_api/oauthToken_validation",
+                5,
+                30);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
